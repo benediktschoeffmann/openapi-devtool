@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "6.0.0",
+    "storageDir": "lib/jar",
+    "generators": {
+      "server": {
+        "generatorName": "php-symfony",
+        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "output": "./dist/server/php-symfony"
+      },
+      "client": {
+        "generatorName": "javascript",
+        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "output": "./dist/client/js"
+      }
+    }
+  }
+}

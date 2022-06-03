@@ -1,0 +1,7 @@
+# Parameters in paths
+petId:
+  $ref: './path/taskId.yaml'
+
+# Parameters in queries
+limit:
+  $ref: './query/limit.yaml'

@@ -1,0 +1,27 @@
+openapi: "3.0.0"
+info:
+  version: 0.0.1
+  title: virtu matching api
+  description: api for the virtu applications matching microservice.
+  license:
+    name: MIT
+  contact:
+    name: Benedikt Schoeffmann
+    url: https://www.crearex.net
+    email: b.schoeffmann@crearex.net
+servers:
+  - url: https://www.crearex.net/virtu/api/v1
+tags:
+  - name: task
+paths:
+  /tasks:
+    $ref: "./resources/tasks.yaml"
+  /tasks/{taskId}:
+    $ref: "./resources/task.yaml"
+components:
+  parameters:
+    $ref: "./parameters/_index.yaml"
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  responses:
+    $ref: "./responses/_index.yaml"

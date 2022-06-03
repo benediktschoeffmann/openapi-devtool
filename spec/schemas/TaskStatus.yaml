@@ -1,0 +1,5 @@
+type: object
+properties:
+  status:
+    type: string
+    enum: [created, open, doing, review, done]

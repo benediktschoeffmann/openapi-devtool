@@ -1,0 +1,45 @@
+type: object
+required: 
+  - day
+  - month
+  - year
+  - hours
+  - minutes
+  - seconds
+properties:
+  day:
+    type: integer
+    format: int32
+    minimum: 1
+    maximum: 31
+    default: 1
+  month:
+    type: integer
+    format: int32
+    minimum: 1
+    maximum: 12
+    default: 1
+  year:
+    type: integer
+    format: int32
+    default: 2022
+  hours:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 23
+    default: 0
+  minutes:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 59
+    default: 0
+  seconds:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 59
+    default: 0
+    
+    

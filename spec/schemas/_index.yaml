@@ -1,0 +1,21 @@
+Customer: 
+  $ref: "./Customer.yaml"
+DateTime:
+  $ref: './DateTime.yaml'
+Error:
+  $ref: "./Error.yaml"
+Matching:
+  $ref: './Matching.yaml'
+MatchingMessage:
+  $ref: './MatchingMessage.yaml'
+MatchingStatus:
+  $ref: './MatchingStatus.yaml'
+Production:
+  $ref: './Production.yaml'
+Task:
+  $ref: "./Task.yaml"
+User:
+  $ref: './User.yaml'
+UserType:
+  $ref: './UserType.yaml'
+

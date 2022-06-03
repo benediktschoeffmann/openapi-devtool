@@ -1,0 +1,14 @@
+{
+    "specs": [
+        {
+            "file": "./spec/openapi.yaml",
+            "enabled": true,
+            "vFolders": [
+            ],
+            "context": {
+                "public": true,
+                "version": "1.0.0"
+            }
+        }
+    ]
+}

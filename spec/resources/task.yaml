@@ -1,0 +1,17 @@
+get:
+  summary: Detail
+  operationId: getTaskById
+  description: Info for a specific task
+  tags:
+    - task
+  parameters:
+    - $ref: "../parameters/path/taskId.yaml"
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/Task.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"

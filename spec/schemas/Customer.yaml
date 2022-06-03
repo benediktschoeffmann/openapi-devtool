@@ -1,0 +1,19 @@
+title: Customer tyoe
+description: 'A Company who starts projects with us. '
+type: object
+properties:
+  id:
+    format: int32
+    type: integer
+  name:
+    type: string
+  url:
+    type: string
+  users:
+    type: array
+    items:
+      $ref: './User.yaml'
+  productions:
+    type: array
+    items:
+      $ref: './Production.yaml'
