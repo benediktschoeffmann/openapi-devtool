@@ -20,6 +20,8 @@ properties:
     $ref: './DateTime.yaml'
   productionOwner:
     $ref: './User.yaml'
+  modules:
+    $ref: './Module.yaml'
   tasks:
     type: array
     items:  
