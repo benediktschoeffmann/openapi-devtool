@@ -1,4 +1,5 @@
 type: object
+description: An User. This includes customers as well as contractors as well as employees of creare(x).
 properties:
   id:
     type: integer
