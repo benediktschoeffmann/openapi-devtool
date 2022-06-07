@@ -1,4 +1,5 @@
 type: object
+description: Type representing a date and a time
 required: 
   - day
   - month
