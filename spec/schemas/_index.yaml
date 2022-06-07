@@ -14,6 +14,8 @@ Production:
   $ref: './Production.yaml'
 Task:
   $ref: "./Task.yaml"
+TaskStatus:
+  $ref: "./TaskStatus.yaml"
 User:
   $ref: './User.yaml'
 UserType:
