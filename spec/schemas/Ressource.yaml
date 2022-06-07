@@ -1,0 +1,17 @@
+Ressource:
+  title: Ressource
+  type: object
+  description: A bookable ressource
+  properties:
+    id:
+      type: int
+      format: int64
+    name:
+      type: string
+HumanRessource:
+  title: HumanRessource
+  type: object 
+  description: 
+  properties:
+      
+    

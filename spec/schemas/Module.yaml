@@ -1,3 +1,18 @@
 type: object
 description: A bookable module 
-required:
+properties:
+  id:
+    type: int
+    format: int64
+  name:
+    type: string
+  ressources:
+    type: array
+    items:
+      $ref: './Ressource.yaml'
+  tasks:
+    type: array
+    items:
+      $ref: './Task.yaml'
+
+        
