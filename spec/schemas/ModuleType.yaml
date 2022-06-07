@@ -1,6 +1,10 @@
-type: 
-title: 
-type: 
-description: 
+
+title: Module Type
+type: object 
+description: The specific type of addable module
 properties:
+  moduleType:
+    type: string
+    enum: []
+    
     

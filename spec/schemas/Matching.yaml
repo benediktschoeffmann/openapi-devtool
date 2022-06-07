@@ -16,5 +16,4 @@ properties:
     items:
       $ref: './MatchingMessage.yaml'
   status:
-    type: string
-    enum: [open, negotiating, rejected, accepted]
+    $ref: './MatchingStatus.yaml'
