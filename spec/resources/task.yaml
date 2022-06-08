@@ -14,4 +14,4 @@ get:
           schema:
             $ref: "../schemas/Task.yaml"
     default:
-      $ref: "../responses/UnexpectedError.yaml"
+      $ref: "../responses/UnexpectedErrorResponse.yaml"
