@@ -3,6 +3,9 @@ info:
   version: 0.0.1
   title: virtu matching api
   description: api for the virtu applications matching microservice.
+  license: 
+    name: MIT
+    url: https://opensource.org/licenses/MIT
   contact:
     name: Benedikt Schoeffmann
     url: https://www.crearex.net
