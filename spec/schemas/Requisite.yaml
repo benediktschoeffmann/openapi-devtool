@@ -1,6 +1,5 @@
 title: A Requisite 
-type: Object
-description: 
+type: object
 properties:
   id:
     type: integer
@@ -9,5 +8,5 @@ properties:
     type: string
   value:
     type: string
-    
+
   
