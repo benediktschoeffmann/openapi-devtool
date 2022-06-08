@@ -1,0 +1,6 @@
+name: customerId
+in: path
+required: true
+description: The id of the customer to retrieve
+schema:
+  type: string
