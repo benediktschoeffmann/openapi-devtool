@@ -19,11 +19,13 @@ tags:
     description: All Operations pertaining to a Contractors 
 paths:
   /customer:
-    $ref: "./resources/customer.yaml"
+    $ref: resources/paths/customer/getAllCustomers.yaml
+  /customer/{customerId}:
+    $ref: resources/paths/customer/customerById.yaml
 components:
   parameters:
-    $ref: "./parameters/_index.yaml"
+    $ref: parameters/_index.yaml
   schemas:
-    $ref: "./schemas/_index.yaml"
+    $ref: schemas/_index.yaml
   responses:
-    $ref: "./responses/_index.yaml"
+    $ref: responses/_index.yaml
