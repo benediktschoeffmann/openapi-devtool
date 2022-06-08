@@ -22,10 +22,10 @@ ProductionElement:
   $ref: './ProductionElement.yaml'
 ProductionTemplate:
   $ref: './ProductionTemplate.yaml'
-Task:
-  $ref: "./Task.yaml"
-TaskStatus:
-  $ref: "./TaskStatus.yaml"
+# Task:
+#   $ref: "./Task.yaml"
+# TaskStatus:
+#   $ref: "./TaskStatus.yaml"
 User:
   $ref: './User.yaml'
 UserType:
