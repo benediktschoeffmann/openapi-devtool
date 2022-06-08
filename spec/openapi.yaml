@@ -3,8 +3,6 @@ info:
   version: 0.0.1
   title: virtu matching api
   description: api for the virtu applications matching microservice.
-  license:
-    name: MIT
   contact:
     name: Benedikt Schoeffmann
     url: https://www.crearex.net
@@ -12,12 +10,13 @@ info:
 servers:
   - url: https://www.crearex.net/virtu/api/v1
 tags:
-  - name: task
+  - name: production
+    description: All Operations pertaining to a Production   
+  - name: contractor
+    description: All Operations pertaining to a Contractors 
 paths:
-  /tasks:
-    $ref: "./resources/tasks.yaml"
-  /tasks/{taskId}:
-    $ref: "./resources/task.yaml"
+  /customer:
+    $ref: "./resources/customer.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"
