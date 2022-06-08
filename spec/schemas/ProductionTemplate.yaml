@@ -1,0 +1,10 @@
+title: Production Template
+type: object
+description:  
+properties:
+  description: 
+    type: string
+  elements:
+    type: array
+    items:
+      $ref: './ProductionElement.yaml'
