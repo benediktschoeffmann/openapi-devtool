@@ -1,0 +1,13 @@
+title: A Requisite 
+type: Object
+description: 
+properties:
+  id:
+    type: integer
+    format: int64
+  key:
+    type: string
+  value:
+    type: string
+    
+  
