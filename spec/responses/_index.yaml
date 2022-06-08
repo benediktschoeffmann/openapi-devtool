@@ -1,4 +1,21 @@
-UnexpectedError:
-  $ref: "./UnexpectedErrorResponse.yaml"
+
+
+# 201
 NullResponse:
   $ref: "./NullResponse.yaml"
+# 403
+NotAuthorizedResponse:
+  $ref: "./NotAuthorizedResponse.yaml"
+# 404 
+NotFoundResponse:
+  $ref: "./NotFoundResponse.yaml"
+# 503
+UnexpectedErrorResponse: 
+  $ref: "./UnexpectedErrorResponse.yaml"
+  
+# Customer  
+CustomerResponse:
+  $ref: "./CustomerResponse.yaml"
+CustomerListResponse:
+  $ref: "./CustomerListResponse.yaml"
+  

@@ -19,7 +19,7 @@ get:
           schema:
             $ref: "../schemas/Task.yaml"
     default:
-      $ref: "../responses/UnexpectedError.yaml"
+      $ref: "../responses/UnexpectedErrorResponse.yaml"
 post:
   summary: Create
   operationId: createTasks
@@ -30,5 +30,5 @@ post:
     '201':
         $ref : "../responses/NullResponse.yaml"
     default:
-        $ref : "../responses/UnexpectedError.yaml"
+        $ref : "../responses/UnexpectedErrorResponse.yaml"
 

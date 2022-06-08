@@ -1,6 +1,8 @@
 # Parameters in paths
-petId:
-  $ref: './path/taskId.yaml'
+customerId:
+  $ref: './path/customerId.yaml'
+# taskId:
+#   $ref: './path/taskId.yaml'
 
 # Parameters in queries
 limit:
