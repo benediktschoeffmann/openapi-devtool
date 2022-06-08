@@ -10,8 +10,8 @@ MatchingMessage:
   $ref: './MatchingMessage.yaml'
 MatchingStatus:
   $ref: './MatchingStatus.yaml'
-Module:
-  $ref: './Module.yaml'
+# Module:
+#   $ref: './Module.yaml'
 Production:
   $ref: './Production.yaml'
 Task:
