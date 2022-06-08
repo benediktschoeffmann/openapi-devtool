@@ -2,7 +2,7 @@ type: object
 description: A bookable module 
 properties:
   id:
-    type: int
+    type: integer
     format: int64
   name:
     type: string

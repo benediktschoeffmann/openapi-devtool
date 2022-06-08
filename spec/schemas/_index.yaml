@@ -6,14 +6,16 @@ DateTime:
   $ref: './DateTime.yaml'
 Error:
   $ref: "./Error.yaml"
-Matching:
-  $ref: './Matching.yaml'
-MatchingMessage:
-  $ref: './MatchingMessage.yaml'
-MatchingStatus:
-  $ref: './MatchingStatus.yaml'
+# Matching:
+#   $ref: './Matching.yaml'
+# MatchingMessage:
+#   $ref: './MatchingMessage.yaml'
+# MatchingStatus:
+#   $ref: './MatchingStatus.yaml'
 # Module:
 #   $ref: './Module.yaml'
+# ModuleType:
+#   $ref: './ModuleType.yaml'
 Operator:
   $ref: "./Operator.yaml"
 Production:

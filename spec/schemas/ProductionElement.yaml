@@ -1,5 +1,16 @@
 title: 'ProductionElement' 
 type: object
-description: 
 properties:
+  id:
+    type: integer
+    format: int64
+  description:
+    type: string
+  ressource:
+    $ref: "./Ressource.yaml"
+  contractor:
+    $ref: "./Contractor.yaml"
+  additionalProperties:
+    type: string
+  
     
