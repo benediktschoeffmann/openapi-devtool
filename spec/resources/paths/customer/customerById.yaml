@@ -1,0 +1,18 @@
+get: 
+  summary: Show a single Customer
+  operationId: getCustomerById
+  tags: 
+    -  customer
+  parameters: 
+    - $ref: ../../../parameters/path/customerId.yaml
+  responses: 
+    200: 
+      $ref: ../../../responses/CustomerResponse.yaml
+    403:
+      $ref: ../../../responses/NotAuthorizedResponse.yaml
+    404:
+      $ref: ../../../responses/NotFoundResponse.yaml
+    default:
+      $ref: ../../../responses/UnexpectedErrorResponse.yaml
+    
+  
