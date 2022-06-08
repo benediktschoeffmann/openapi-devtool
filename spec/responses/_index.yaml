@@ -3,6 +3,9 @@
 # 201
 NullResponse:
   $ref: "./NullResponse.yaml"
+# 400
+BadRequestResponse:
+  $ref: './BadRequestResponse.yaml'
 # 403
 NotAuthorizedResponse:
   $ref: "./NotAuthorizedResponse.yaml"
