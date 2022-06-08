@@ -18,6 +18,10 @@ Operator:
   $ref: "./Operator.yaml"
 Production:
   $ref: './Production.yaml'
+ProductionElement:
+  $ref: './ProductionElement.yaml'
+ProductionTemplate:
+  $ref: './ProductionTemplate.yaml'
 Task:
   $ref: "./Task.yaml"
 TaskStatus:
