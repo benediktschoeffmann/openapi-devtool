@@ -7,9 +7,7 @@ properties:
     format: int64
   name:
     type: string
-  needsAudioOperator:
-    type: boolean
-  needsVideoOperator:
-    type: boolean
+  additionalProperties:
+    $ref: './Requisite.yaml'
       
     

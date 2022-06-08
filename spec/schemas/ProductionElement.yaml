@@ -6,11 +6,17 @@ properties:
     format: int64
   description:
     type: string
-  ressource:
-    $ref: "./Ressource.yaml"
-  contractor:
-    $ref: "./Contractor.yaml"
-  additionalProperties:
+  pictureUrl:
     type: string
+  ressources:
+    type: array
+    items:
+      $ref: "./Ressource.yaml"
+  contractors:
+    type: array
+    items:
+      $ref: "./Contractor.yaml"
+  additionalProperties:
+    $ref: './Requisite.yaml'
   
     

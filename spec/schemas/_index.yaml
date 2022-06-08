@@ -24,6 +24,10 @@ ProductionElement:
   $ref: './ProductionElement.yaml'
 ProductionTemplate:
   $ref: './ProductionTemplate.yaml'
+Requisite:
+  $ref: './Requisite.yaml'
+Ressource:
+  $ref: './Ressource.yaml'
 # Task:
 #   $ref: "./Task.yaml"
 # TaskStatus:
