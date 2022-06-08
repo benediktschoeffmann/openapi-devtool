@@ -1,0 +1,9 @@
+allOf:
+  - $ref: './Contractor.yaml'
+  - type: object
+properties:
+  skillset:
+    type: string
+    enum: [Audio,Video]
+  
+    

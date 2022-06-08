@@ -1,0 +1,21 @@
+type: object
+title: Contractor.
+description: A Contractor is an employee who works for us and does stuff for the customer. 
+required:
+  - id
+  - name
+  - email
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+  email:
+    type: string
+    pattern: "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+
+
+    
+
+    

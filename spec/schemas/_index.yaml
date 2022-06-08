@@ -1,3 +1,5 @@
+Contractor:
+  $ref: "./Contractor.yaml"
 Customer: 
   $ref: "./Customer.yaml"
 DateTime:
@@ -12,6 +14,8 @@ MatchingStatus:
   $ref: './MatchingStatus.yaml'
 # Module:
 #   $ref: './Module.yaml'
+Operator:
+  $ref: "./Operator.yaml"
 Production:
   $ref: './Production.yaml'
 Task:
