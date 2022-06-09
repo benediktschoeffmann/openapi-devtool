@@ -22,3 +22,8 @@ CustomerResponse:
 CustomerListResponse:
   $ref: "./CustomerListResponse.yaml"
   
+# Operator
+OperatorResponse:
+  $ref: OperatorResponse.yaml
+OperatorListResponse:
+  $ref: OperatorListResponse.yaml

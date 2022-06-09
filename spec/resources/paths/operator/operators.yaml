@@ -1,0 +1,16 @@
+get: 
+  summary: List all operators
+  operationId: getAllOperators
+  tags: 
+    -  operator
+  parameters:
+    - $ref: ../../../parameters/query/limit.yaml
+  responses: 
+    200: 
+      $ref: ../../../responses/OperatorListResponse.yaml
+    403:
+      $ref: ../../../responses/NotAuthorizedResponse.yaml
+    404:
+      $ref: ../../../responses/NotFoundResponse.yaml
+    default:
+      $ref: ../../../responses/UnexpectedErrorResponse.yaml

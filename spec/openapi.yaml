@@ -19,9 +19,17 @@ tags:
     description: All Operations pertaining to a Contractors 
 paths:
   /customer:
-    $ref: resources/paths/customer/getAllCustomers.yaml
+    $ref: resources/paths/customer/customers.yaml
   /customer/{customerId}:
     $ref: resources/paths/customer/customerById.yaml
+  /operator:
+    $ref: resources/paths/operator/operators.yaml
+  /operator/{operatorId}:
+    $ref: resources/paths/operator/operatorById.yaml    
+  /operator/type/{operatorType}:
+    $ref: resources/paths/operator/operatorByType.yaml
+
+
 components:
   parameters:
     $ref: parameters/_index.yaml
