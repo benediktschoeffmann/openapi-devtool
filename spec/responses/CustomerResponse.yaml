@@ -1,6 +1,0 @@
-description: A single customer.
-content: 
-  application/json:   
-    schema: 
-      $ref: '../schemas/Customer.yaml'
-  
