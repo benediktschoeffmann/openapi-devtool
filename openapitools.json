@@ -7,27 +7,27 @@
     "generators": { 
       "server": {
         "generatorName": "php-symfony",
-        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "inputSpec" : "./dist/virtu-api.yaml",
         "output": "./dist/server/php-symfony"
       },
       "client-js": {
         "generatorName": "javascript",
-        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "inputSpec" : "./dist/virtu-api.yaml",
         "output": "./dist/client/js"
       }, 
       "client-php": {
         "generatorName": "php",
-        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "inputSpec" : "./dist/virtu-api.yaml",
         "output": "./dist/client/php "
       },
       "client-ts-axios": {
         "generatorName": "typescript-axios",
-        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "inputSpec" : "./dist/virtu-api.yaml",
         "output": "./dist/client/ts-axios"
       },
       "client-ts-node": {
         "generatorName": "typescript-node",
-        "inputSpec" : "./dist/virtu-matching-api.yaml",
+        "inputSpec" : "./dist/virtu-api.yaml",
         "output": "./dist/client/ts-node"
       }
     }
