@@ -1,9 +1,0 @@
-# Parameters in paths
-customerId:
-  $ref: './path/customerId.yaml'
-# taskId:
-#   $ref: './path/taskId.yaml'
-
-# Parameters in queries
-limit:
-  $ref: './query/limit.yaml'
