@@ -1,6 +1,0 @@
-name: taskId
-in: path
-required: true
-description: The id of the Task to retrieve
-schema:
-  type: string

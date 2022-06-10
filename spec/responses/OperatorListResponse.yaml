@@ -1,8 +1,0 @@
-description: A List of operators.
-content: 
-  application/json:   
-    schema: 
-      type: array
-      items:
-        $ref: '../schemas/Operator.yaml'
-  

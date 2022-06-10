@@ -1,5 +1,0 @@
-type: object
-properties:
-  userType:
-    type: string
-    enum: [SuperUser, Admin, Editor, Viewer, Contractor]

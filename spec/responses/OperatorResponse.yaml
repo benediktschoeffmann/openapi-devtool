@@ -1,6 +1,0 @@
-description: A single operator.
-content: 
-  application/json:   
-    schema: 
-      $ref: '../schemas/Operator.yaml'
-  

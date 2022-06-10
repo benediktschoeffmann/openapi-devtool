@@ -1,6 +1,0 @@
-name: operatorType
-in: path
-required: true
-description: The type of the operators to retrieve
-schema:
-  type: string
