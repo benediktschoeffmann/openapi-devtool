@@ -22,10 +22,7 @@ Install the OpenAPI Libraries:
     npm i -g @lyra-network/openapi-dev-tool @openapitools/openapi-generator-cli
 ```
 
-Run the generator and npm install script via ```make```:
-```
-    make install
-```
+```make``` is probably already installed on your *NIX-machine, refer to your distribution's documentation if it is not.
 
 ## Viewing the Documentation
 
@@ -38,7 +35,11 @@ You need to have port  3000 open for this to work.
 
 ## Generating
 
-Merge split definmition files and generate the client/server libraries via ```make```:
+Merge split definition files and generate the client/server libraries via ```make```:
 ```bash
     make generate
 ```
+
+## TL;DR
+
+Just invoke ```make```. 
