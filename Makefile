@@ -8,6 +8,13 @@ DIST_DIR := dist/
 REPO_DIR := virtu-openapi-spec
 REPO_URL := git@bitbucket.org:crearex/virtu-openapi-spec.git
 
+# config file
+GENERATOR_CONFIG_FILE := openapi-dev-tool-config.json
+
+# colors
+CYAN := \033[0;36m
+WHITE := \033[1;37m
+
 
 # server libs to create
 SERVERS := php_symfony
@@ -20,18 +27,21 @@ CLIENTS := php javascript typescript-axios typescript-node
 clean:
 	@if [ -d "$(DIST_DIR)" ]; then \
 		rm -rf $(DIST_DIR); \
-		echo "Distribution directory $(DIST_DIR) deleted. \\n"; \
+		echo "$(CYAN) \n \nDistribution directory $(DIST_DIR) deleted.\n\n$(WHITE)"; \
 	fi;
 
 install: 
-	@npm ci 
+	@echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
+	(openapi-generator-cli > /dev/null); \
+	echo "$(CYAN) \n \n Running \"npm ci\" "; \
+	npm ci
 
 pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
-		echo "\\n \\n Adding submodule $(REPO_URL) \\n \\n"; \
+		echo "$(CYAN) \n \n Adding submodule $(REPO_URL) \n \n$(WHITE)"; \
 		git submodule add --force $(REPO_URL); \
 	fi; \
-	echo "\\n \\n Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
+	echo "$(CYAN)\n\n Updating submodule. \n\n$(WHITE)" && cd $(REPO_DIR) && git pull && cd ..
 
 createDevToolConfig: 
 	# @rm config.json; \
@@ -40,13 +50,14 @@ createDevToolConfig:
 	# echo "\"enabled\": true,\"vFolders\": [],\"context\": {\"public\": true,"version": "1.0.0"}}]} " > config.json
  
 merge: pull
-	@echo "\\n \\n Merging .yaml files \\n \\n"; \
-	openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
+	@echo "$(CYAN) \n \n Merging .yaml files \n \n$(WHITE)"; \
+	openapi-dev-tool merge -c $(GENERATOR_CONFIG_FILE) -o $(DIST_DIR) -v
 
 serve: 
-	@echo " \\n \\n Starting Documentation server. \\n" && \
-	(openapi-dev-tool serve -c openapi-dev-tool-config.json &) && (x-www-browser http://localhost:3000 &)
+	@echo "$(CYAN) \n \n Starting Documentation server. \n \n$(WHITE)" && \
+	(openapi-dev-tool serve -c $(GENERATOR_CONFIG_FILE) &) && (x-www-browser http://localhost:3000 &)
 
 generate: merge
-	@echo "\\n \\n Generating Client & Server Libraries. \\n \\n"; \
-	openapi-generator-cli generate
+	@echo "$(CYAN) \n \n Generating Client & Server Libraries. \n \n$(WHITE)"; \
+	openapi-generator-cli generate; \
+	echo "$(CYAN) \n \n \n \n All done ! Have a look at the $(DIST_DIR) directory. \n \n$(WHITE)" 
