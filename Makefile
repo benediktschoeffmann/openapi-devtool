@@ -28,10 +28,10 @@ install:
 
 pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
-		echo "Adding submodule $(REPO_URL) \\n \\n"; \
+		echo "\\n \\n Adding submodule $(REPO_URL) \\n \\n"; \
 		git submodule add --force $(REPO_URL); \
 	fi; \
-	echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
+	echo "\\n \\n Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
 
 createDevToolConfig: 
 	# @rm config.json; \
@@ -40,12 +40,12 @@ createDevToolConfig:
 	# echo "\"enabled\": true,\"vFolders\": [],\"context\": {\"public\": true,"version": "1.0.0"}}]} " > config.json
  
 merge: pull
-	@ echo "Merging .yaml files \\n \\n"; \
+	@echo "\\n \\n Merging .yaml files \\n \\n"; \
 	openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
 
 serve:  
 	@openapi-dev-tool serve -c config.json
 
 generate: merge
-	@echo "Generating Client & Server Libraries. \\n \\n"; \
+	@echo "\\n \\n Generating Client & Server Libraries. \\n \\n"; \
 	openapi-generator-cli generate
