@@ -2,6 +2,7 @@
     "specs": [
         {
             "file": "./virtu-openapi-spec/openapi.yaml",
+            "port": 5000,
             "enabled": true,
             "vFolders": [
             ],
