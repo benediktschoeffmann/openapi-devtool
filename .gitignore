@@ -3,5 +3,9 @@ lib/
 dist/
 .env
 
-# enter your project name here. the project should be changed in its own directory. 
+# enter your project name here. the project should be changed in its own repo and not here, . 
 virtu-openapi-spec/
+
+# package.json - commit only the lock file, otherwise you might run into troubles caused by 
+# incompatible package version
+package.json
