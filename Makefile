@@ -24,7 +24,7 @@ clean:
 	fi;
 
 install: 
-	@npm install 
+	@npm ci 
 
 pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
