@@ -1,12 +1,13 @@
 # basic info
 PROJECT_NAME := virtu-api
+
+# directories
+DIST_DIR := dist/
+
+# repository information
 REPO_DIR := virtu-openapi-spec
 REPO_URL := git@bitbucket.org:crearex/virtu-openapi-spec.git
 
-# directories
-SPEC_DIR := ./spec/
-SPEC_FILE := openapi.yaml
-DIST_DIR := dist/
 
 # server libs to create
 SERVERS := php_symfony
@@ -22,9 +23,6 @@ clean:
 		echo "Distribution directory $(DIST_DIR) deleted. \\n"; \
 	fi;
 	
-clone:
-	@git clone ${REPO_URL} .
-
 pull:
 	@echo "$(REPO_DIR)"; \
 	@if [ ! -d "$(REPO_DIR)" ]; then \
