@@ -27,11 +27,11 @@ clone:
 
 pull:
 	@echo "$(REPO_DIR)"; \
-	if [ ! -d "$(REPO_DIR)" ]; then \
+	@if [ ! -d "$(REPO_DIR)" ]; then \
 		echo "Adding submodule $(REPO_URL)"; \
 		git submodule add --force $(REPO_URL); \
 	fi; \
-	echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
+	@echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
 
 createDevToolConfig: 
 	# @rm config.json; \
@@ -41,13 +41,13 @@ createDevToolConfig:
  
 
 install: clone
-	npm install
+	@npm install
 
 merge: install
-	openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
+	@openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
 
 serve: install 
-	openapi-dev-tool serve -c config.json
+	@openapi-dev-tool serve -c config.json
 
 generate: merge
-	openapi-cli generate
+	@openapi-generator-cli generate
