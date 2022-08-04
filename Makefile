@@ -24,7 +24,9 @@ SERVERS := php_symfony
 # client libs to generate
 CLIENTS := php javascript typescript-axios typescript-node
 
-.PHONY: clean install pull merge serve generate
+.PHONY: all clean install pull merge serve generate
+
+all: clean install pull generate
 
 clean:
 	@if [ -d "$(DIST_DIR)" ]; then \
@@ -34,7 +36,7 @@ clean:
 
 install: 
 	@if [ ! -d "$(LIB_DIR)" ]; then \
-		@echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
+		echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
 		(openapi-generator-cli > /dev/null); \
 	fi; \
 	if [ ! -d "$(PACKAGE_DIR)" ]; then \
