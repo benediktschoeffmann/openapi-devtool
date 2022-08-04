@@ -15,21 +15,23 @@ SERVERS := php_symfony
 # client libs to generate
 CLIENTS := php javascript typescript-axios typescript-node
 
-.PHONY: clean clone
+.PHONY: clean install pull merge serve generate
 
 clean:
 	@if [ -d "$(DIST_DIR)" ]; then \
 		rm -rf $(DIST_DIR); \
 		echo "Distribution directory $(DIST_DIR) deleted. \\n"; \
 	fi;
-	
-pull:
-	@echo "$(REPO_DIR)"; \
+
+install: 
+	@npm install 
+
+pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
-		echo "Adding submodule $(REPO_URL)"; \
+		echo "Adding submodule $(REPO_URL) \\n \\n"; \
 		git submodule add --force $(REPO_URL); \
 	fi; \
-	@echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
+	echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
 
 createDevToolConfig: 
 	# @rm config.json; \
@@ -37,15 +39,13 @@ createDevToolConfig:
 	# echo "$(SPEC_DIR)/${SPEC_FILE}\"," > config.json && \
 	# echo "\"enabled\": true,\"vFolders\": [],\"context\": {\"public\": true,"version": "1.0.0"}}]} " > config.json
  
+merge: pull
+	@ echo "Merging .yaml files \\n \\n"; \
+	openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
 
-install: clone
-	@npm install
-
-merge: install
-	@openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
-
-serve: install 
+serve:  
 	@openapi-dev-tool serve -c config.json
 
 generate: merge
-	@openapi-generator-cli generate
+	@echo "Generating Client & Server Libraries. \\n \\n"; \
+	openapi-generator-cli generate
