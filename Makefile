@@ -3,6 +3,8 @@ PROJECT_NAME := virtu-api
 
 # directories
 DIST_DIR := dist/
+LIB_DIR := lib/
+PACKAGE_DIR := node_modules/
 
 # repository information
 REPO_DIR := virtu-openapi-spec
@@ -31,10 +33,14 @@ clean:
 	fi;
 
 install: 
-	@echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
-	(openapi-generator-cli > /dev/null); \
-	echo "$(CYAN) \n \n Running \"npm ci\" "; \
-	npm ci
+	@if [ ! -d "$(LIB_DIR)" ]; then \
+		@echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
+		(openapi-generator-cli > /dev/null); \
+	fi; \
+	if [ ! -d "$(PACKAGE_DIR)" ]; then \
+		echo "$(CYAN) \n \n Running \"npm ci\" \n\n$(WHITE)"; \
+		npm ci; \
+	fi;
 
 pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
@@ -61,3 +67,5 @@ generate: merge
 	@echo "$(CYAN) \n \n Generating Client & Server Libraries. \n \n$(WHITE)"; \
 	openapi-generator-cli generate; \
 	echo "$(CYAN) \n \n \n \n All done ! Have a look at the $(DIST_DIR) directory. \n \n$(WHITE)" 
+
+all: generate
