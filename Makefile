@@ -43,8 +43,9 @@ merge: pull
 	@echo "\\n \\n Merging .yaml files \\n \\n"; \
 	openapi-dev-tool merge -c config.json -o $(DIST_DIR) -v
 
-serve:  
-	@openapi-dev-tool serve -c config.json
+serve: 
+	@echo " \\n \\n Starting Documentation server. \\n" && \
+	(openapi-dev-tool serve -c openapi-dev-tool-config.json &) && (x-www-browser http://localhost:3000 &)
 
 generate: merge
 	@echo "\\n \\n Generating Client & Server Libraries. \\n \\n"; \
