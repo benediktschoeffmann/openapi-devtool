@@ -29,7 +29,7 @@ pull:
 	@echo "$(REPO_DIR)"; \
 	if [ ! -d "$(REPO_DIR)" ]; then \
 		echo "Adding submodule $(REPO_URL)"; \
-		git submodule add $(REPO_URL); \
+		git submodule add --force $(REPO_URL); \
 	fi; \
 	echo "Updating submodule. \\n" && cd $(REPO_DIR) && git pull && cd ..
 
