@@ -9,7 +9,7 @@ Clone the repository.
 git clone git@bitbucket.org:crearex/virtu-openapi-dev-tool.git
 ```
 
-If you have authorisation problems, you probably don't have ssh setup correctly. Follow guides like this one to setup ssh. [SSH setup guide](https://linuxhint.com/generate-ssh-key-ubuntu/)
+If you have authorisation problems, you probably didn't set up ssh correctly. Follow guides like this one to setup ssh. [SSH setup guide](https://linuxhint.com/generate-ssh-key-ubuntu/)
 
 Please bear in mind that your ssh key has to be set as an authorization in the repository settings. 
 
@@ -23,6 +23,13 @@ Install the OpenAPI Libraries:
 ```
 
 ```make``` is probably already installed on your *NIX-machine, refer to your distribution's documentation if it is not.
+
+## Configuring
+
+* set the repo url in the Makefile.
+* make sure the base .yaml file matches the entry in ```openapi-dev-tool-config.json``` (default is ```openapi.yaml```).
+* the merged filename is the same as the title in the openapi file.
+* make sure the inputSpec parameters in ```openapitools.json``` match the api title.
 
 ## Viewing the Documentation
 
