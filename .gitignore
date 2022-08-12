@@ -2,6 +2,7 @@ node_modules/
 lib/
 dist/
 .env
+.gitmodules
 
 # The folder where the specifications get cloned to: 
 specs/

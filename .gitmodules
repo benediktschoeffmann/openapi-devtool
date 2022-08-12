@@ -1,0 +1,3 @@
+[submodule "specs"]
+	path = specs
+	url = git@bitbucket.org:crearex/virtu-openapi-spec.git
