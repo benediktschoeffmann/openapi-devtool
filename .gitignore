@@ -3,5 +3,5 @@ lib/
 dist/
 .env
 
-# enter your project name here. the project should be changed in its own repo and not here, . 
-virtu-openapi-spec/
+# The folder where the specifications get cloned to: 
+specs/

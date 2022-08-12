@@ -7,7 +7,7 @@ LIB_DIR := lib/
 PACKAGE_DIR := node_modules/
 
 # repository information
-REPO_DIR := virtu-openapi-spec
+REPO_DIR := specs
 REPO_URL := git@bitbucket.org:crearex/virtu-openapi-spec.git
 
 # config file
@@ -47,9 +47,9 @@ install:
 pull: clean
 	@if [ ! -d "$(REPO_DIR)" ]; then \
 		echo "$(CYAN) \n \n Adding submodule $(REPO_URL) \n \n$(WHITE)"; \
-		git submodule add --force $(REPO_URL); \
+		git submodule add --force $(REPO_URL) $(REPO_DIR); \
 	fi; \
-	echo "$(CYAN)\n\n Updating submodule. \n\n$(WHITE)" && cd $(REPO_DIR) && git pull && cd ..
+	echo "$(CYAN)\n\n Updating submodule. \n\n$(WHITE)" && cd $(REPO_DIR) && git checkout master && git pull && cd ..
 
 createDevToolConfig: 
 	# @rm config.json; \
