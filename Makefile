@@ -9,7 +9,7 @@ PACKAGE_DIR := node_modules/
 # repository information
 REPO_DIR := specs
 REPO_URL := git@bitbucket.org:crearex/virtu-openapi-spec.git
-REPO_BRANCH := feature/responsesAndRequests
+REPO_BRANCH := master
 
 # config file
 GENERATOR_CONFIG_FILE := openapi-dev-tool-config.json
