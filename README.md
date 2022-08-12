@@ -30,6 +30,7 @@ Install the OpenAPI Libraries:
 * make sure the base .yaml file matches the entry in ```openapi-dev-tool-config.json``` (default is ```openapi.yaml```).
 * the merged filename is the same as the title in the openapi file.
 * make sure the inputSpec parameters in ```openapitools.json``` match the api title.
+* you can configure the pulled branch of your repo in the Makefile via the REPO_BRANCH variable. 
 
 ## Viewing the Documentation
 
