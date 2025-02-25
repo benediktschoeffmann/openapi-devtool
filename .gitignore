@@ -4,6 +4,7 @@ dist/
 .env
 .gitmodules
 .vscode/
+.pnpm-lock.yaml
 
-# The folder where the specifications get cloned to: 
+# The folder where the specifications get cloned to:
 specs/
