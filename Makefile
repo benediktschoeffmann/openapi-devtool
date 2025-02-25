@@ -1,5 +1,8 @@
+#!make
+include .env
+
 # basic info
-PROJECT_NAME := virtu-api
+PROJECT_NAME := ${PROJECT_NAME}
 
 # directories
 DIST_DIR := dist/
@@ -8,8 +11,8 @@ PACKAGE_DIR := node_modules/
 
 # repository information
 REPO_DIR := specs
-REPO_URL := git@bitbucket.org:crearex/virtu-openapi-spec.git
-REPO_BRANCH := master
+REPO_URL := ${REPO_URL}
+REPO_BRANCH := ${REPO_BRANCH}
 
 # config file
 GENERATOR_CONFIG_FILE := openapi-dev-tool-config.json
@@ -20,10 +23,10 @@ WHITE := \033[1;37m
 
 
 # server libs to create
-SERVERS := php_symfony
+SERVERS := ${SERVERS}
 
 # client libs to generate
-CLIENTS := php javascript typescript-axios typescript-node
+CLIENTS := ${CLIENTS}
 
 .PHONY: all clean install pull merge serve generate
 
@@ -35,7 +38,7 @@ clean:
 		echo "$(CYAN) \n \nDistribution directory $(DIST_DIR) deleted.\n\n$(WHITE)"; \
 	fi;
 
-install: 
+install:
 	@if [ ! -d "$(LIB_DIR)" ]; then \
 		echo "$(CYAN) \n \n Downloading Generator libs. \n \n$(WHITE)"; \
 		(openapi-generator-cli > /dev/null); \
@@ -52,23 +55,23 @@ pull: clean
 	fi; \
 	echo "$(CYAN)\n\n Updating submodule. \n\n$(WHITE)" && cd $(REPO_DIR) && git checkout $(REPO_BRANCH) && git pull && cd ..
 
-createDevToolConfig: 
+createDevToolConfig:
 	# @rm config.json; \
 	# echo "\"{\"specs\": [{\"file\": \"" > config.json && \
 	# echo "$(SPEC_DIR)/${SPEC_FILE}\"," > config.json && \
 	# echo "\"enabled\": true,\"vFolders\": [],\"context\": {\"public\": true,"version": "1.0.0"}}]} " > config.json
- 
+
 merge: pull
 	@echo "$(CYAN) \n \n Merging .yaml files \n \n$(WHITE)"; \
 	openapi-dev-tool merge -c $(GENERATOR_CONFIG_FILE) -o $(DIST_DIR) -v
 
-serve: 
+serve:
 	@echo "$(CYAN) \n \n Starting Documentation server. \n \n$(WHITE)" && \
 	(openapi-dev-tool serve -c $(GENERATOR_CONFIG_FILE) &) && (x-www-browser http://localhost:3000 &)
 
 generate: merge
 	@echo "$(CYAN) \n \n Generating Client & Server Libraries. \n \n$(WHITE)"; \
 	openapi-generator-cli generate; \
-	echo "$(CYAN) \n \n \n \n All done ! Have a look at the $(DIST_DIR) directory. \n \n$(WHITE)" 
+	echo "$(CYAN) \n \n \n \n All done ! Have a look at the $(DIST_DIR) directory. \n \n$(WHITE)"
 
 all: generate
