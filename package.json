@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "* Install libs: ``` npm i -g @lyra-network/openapi-dev-tool @openapitools/openapi-generator-cli ```",
     "scripts": {
-      "merge": "openapi-dev-tool merge -c config.json -o dist/ -v",
-      "serve": "openapi-dev-tool serve -c config.json",
+      "merge": "openapi-dev-tool merge -c openapi-dev-tool-config.json -o dist/ -v",
+      "serve": "openapi-dev-tool serve -c openapi-dev-tool-config.json",
       "build": "openapi-generator-cli generate"
     },
     "repository": {
